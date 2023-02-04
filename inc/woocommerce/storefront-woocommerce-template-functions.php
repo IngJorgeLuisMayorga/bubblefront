@@ -88,9 +88,22 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 			return;
 		}
 		?>
-			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
-				<?php /* translators: %d: number of items in cart */ ?>
-				<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
+			<a class="cart-contents-2" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>" >
+				
+				<div class="hoverable" >
+					<img class="hover__off" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-cart.png' ;?>">
+					<img class="hover__on" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-cart--hover.jpg' ;?>">
+				</div>
+
+				<label>
+					<?php /* translators: %d: number of items in cart */ ?>
+					<?php /* echo wp_kses_post( WC()->cart->get_cart_subtotal() ); */?> 
+					<?php echo WC()->cart->get_cart_contents_count(); ?>
+					<span class="count">
+						<?php /* echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) ); */?>
+					</span>
+				</label>
+
 			</a>
 		<?php
 	}
@@ -131,14 +144,36 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 				$class = '';
 			}
 			?>
-		<ul id="site-header-cart" class="site-header-cart menu">
-			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php storefront_cart_link(); ?>
-			</li>
-			<li>
-				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-			</li>
-		</ul>
+		<div class="bsc-fr bsc-h-80">	
+			<ul id="site-header-home" class="site-header-home menu" style="margin-right: 15px;">
+				<a class="hoverable" href="/">
+					<img class="hover__off" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-bsc.png' ;?>">
+					<img class="hover__on" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-bsc.png' ;?>">
+				</a>
+			</ul>
+			<ul id="site-header-search" class="site-header-search menu">
+				<a class="hoverable" href="/?s=&post_type=product">
+					<img class="hover__off" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-lupa.png' ;?>">
+					<img class="hover__on" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-lupa--hover.jpg' ;?>">
+				</a>
+			</ul>
+			<ul id="site-header-cart" class="site-header-cart menu">
+				<li class="<?php echo esc_attr( $class ); ?> first-li" style="width: 35px; position: relative;top: 40px;">
+					<?php storefront_cart_link(); ?>
+				</li>
+				<li style="padding-top:80px; top:0px; left: -150px;position: relative;">
+					<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+				</li>
+			</ul>
+			<ul id="site-header-profile" class="site-header-search menu">
+				<a class="hoverable" href="<?php
+					echo get_permalink( wc_get_page_id( 'myaccount' ) ); 
+				?>">
+					<img class="hover__off" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-persona.png' ;?>">
+					<img class="hover__on" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-persona--hover.jpg' ;?>">
+				</a>
+			</ul>
+		</div>
 			<?php
 		}
 	}
