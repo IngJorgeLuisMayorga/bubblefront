@@ -101,6 +101,17 @@
     max-width: 100%;
     padding: 0px;
 }
+.bsc-bg-texture{
+    background-image: url('http://bubbleskincare.local/wp-content/uploads/2023/02/home-cover-bg.png');
+    background-size: cover;
+    background-color: #f4bece;
+    min-height: 703px;
+}
+.site-content{
+    max-width: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
 .bsc-container,.site-content,.site-footer .col-full{
     max-width: 66.4989378333em;
     margin-left: auto;
@@ -169,4 +180,37 @@
     /*
     top: calc(100% + 16px);
     */
+}
+
+/**  
+************************************** 
+    BSC::TITLE
+***************************************
+**/
+.bsc__title{
+    color:#333;
+    font-size: 45px;
+    font-weight: bold;
+}
+.bsc__title::after{
+    content: '';
+    background: url(http://bubbleskincare.local/wp-content/uploads/2023/02/section-title-line.png) no-repeat;
+    background-size: 100% auto;
+    height: 20px;
+    width: 110px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0em;
+}
+
+/**  
+************************************** 
+    BSC::PRODUCT PAGE
+***************************************
+**/
+.single-product div.product {
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
 }
