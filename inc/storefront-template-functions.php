@@ -352,7 +352,9 @@ if ( ! function_exists( 'storefront_page_content' ) ) {
 	function storefront_page_content() {
 		?>
 		<div class="entry-content">
+
 			<?php the_content(); ?>
+
 			<?php
 				wp_link_pages(
 					array(
@@ -397,7 +399,7 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_post_content' ) ) {
+if (! function_exists( 'storefront_post_content' )) {
 	/**
 	 * Display the post content with a link to the single post
 	 *
@@ -406,6 +408,7 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 	function storefront_post_content() {
 		?>
 		<div class="entry-content">
+
 		<?php
 
 		/**

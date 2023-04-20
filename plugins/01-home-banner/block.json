@@ -1,0 +1,24 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "gutenberg-bcs/bsc-home-banner-01",
+	"title": "BSC: Home Banner",
+	"icon": "dashicons-block-default",
+	"category": "bsc",
+	"attributes": {
+
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "h1"
+		}
+
+	},
+	"example": {
+		"attributes": {
+			"title1": "Envíos a toda Colombia"
+		}
+	},
+	"editorScript": "file:./block.js",
+	"style": "file:./style.css"
+}

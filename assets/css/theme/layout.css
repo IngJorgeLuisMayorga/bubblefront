@@ -214,3 +214,132 @@
     width: 1000px;
     margin: 0 auto;
 }
+
+
+
+
+/**
+******************************************
+    BSC::HOME BANNER
+******************************************
+**/
+.bsc__banner{
+    display: block;
+    width: 100%;
+    background-color: #e8e8e8;
+    margin: 0 auto;
+    width: 100%;
+    padding: 25px auto;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.bsc__banner.col-x3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bsc__banner .bsc__col{
+    width: 250px;
+    margin-left: 1em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+.bsc__banner a{
+    width: 100%;
+    margin: 0 auto;
+}
+.bsc__banner img{
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+}
+.bsc__banner h1{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1em auto;
+    padding: 0;
+    text-align: center;
+}
+.bsc__banner h2{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 1em auto;
+    padding: 0;
+    text-align: center;
+}
+
+.woocommerce:has(.woocommerce-cart-form) {
+    width: 100%;
+    max-width: 1000px;
+    margin:0 auto;
+}
+.woocommerce:has(.woocommerce-checkout) {
+    width: 100%;
+    max-width: 1000px;
+    margin:0 auto;
+}
+
+
+
+
+
+
+.site-footer {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.site-footer h2{
+    color: #ffffff;  
+}
+.site-footer h2::after{
+    content: '';
+    background-size: 100% auto;
+    height: 10px;
+    width: 150px;
+    border-bottom: 1px dotted white;
+    display: block;
+    margin-top: 0em;
+}
+
+#block-8, #block-11, #block-12{
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+footer .widget_nav_menu ul li{
+    padding-left: 0em !important;
+}
+
+footer li a{
+    color: white !important;
+    text-decoration: none !important;
+}
+footer li:before,
+footer li:after{
+    content: '';
+    background-image: none;
+}
+
+footer .widget_nav_menu ul li::before {
+    content: "" !important;
+}
+
+
+
+.woocommerce-info, .woocommerce-noreviews, p.no-comments {
+    background-color: #f4bece;
+}
+
+#post-8.page.type-page.status-publish.hentry{
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+#billing_company_field{
+    display: none;
+}

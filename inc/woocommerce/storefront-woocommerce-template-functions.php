@@ -91,7 +91,7 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 			<a class="cart-contents-2" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>" >
 				
 				<div class="hoverable" >
-					<img class="hover__off" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-cart.png' ;?>">
+					<img class="hover__off" width="50px" src="https://bubblesskincare.com/wp-content/uploads/2023/04/header-icon-cart.png">
 					<img class="hover__on" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-cart--hover.jpg' ;?>">
 				</div>
 
@@ -157,6 +157,16 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 					<img class="hover__on" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-lupa--hover.jpg' ;?>">
 				</a>
 			</ul>
+			
+			<ul id="site-header-profile" class="site-header-search menu">
+				<a class="hoverable" href="<?php
+					echo get_permalink( wc_get_page_id( 'myaccount' ) ); 
+				?>">
+					<img class="hover__off" width="50px" src="https://bubblesskincare.com/wp-content/uploads/2023/04/header-icon-persona.png">
+					<img class="hover__on" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-persona--hover.jpg' ;?>">
+				</a>
+			</ul>
+			
 			<ul id="site-header-cart" class="site-header-cart menu">
 				<li class="<?php echo esc_attr( $class ); ?> first-li" style="width: 35px; position: relative;top: 40px;">
 					<?php storefront_cart_link(); ?>
@@ -165,14 +175,7 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 					<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
 				</li>
 			</ul>
-			<ul id="site-header-profile" class="site-header-search menu">
-				<a class="hoverable" href="<?php
-					echo get_permalink( wc_get_page_id( 'myaccount' ) ); 
-				?>">
-					<img class="hover__off" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-persona.png' ;?>">
-					<img class="hover__on" width="50px" src="<?php echo get_template_directory_uri().'/assets/images/header/header-icon-persona--hover.jpg' ;?>">
-				</a>
-			</ul>
+		
 		</div>
 			<?php
 		}
